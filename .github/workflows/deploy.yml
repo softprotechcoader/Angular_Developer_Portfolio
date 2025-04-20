@@ -13,7 +13,7 @@ jobs:
       - name: ⬇️ Checkout code
         uses: actions/checkout@v3
 
-      - name: 🟢 Set up Node.js (v22)
+      - name: 🟢 Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22.11.0'
@@ -23,6 +23,9 @@ jobs:
 
       - name: 🛠 Build Angular project
         run: npm run build -- --configuration production --base-href /Angular_Developer_Portfolio/
+
+      - name: ✅ Check build output
+        run: ls -la dist && ls -la dist/Angular_Developer_Portfolio
 
       - name: 🚀 Deploy to GitHub Pages
         run: npx angular-cli-ghpages --dir=dist/Angular_Developer_Portfolio
