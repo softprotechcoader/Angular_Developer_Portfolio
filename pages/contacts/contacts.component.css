@@ -1,0 +1,25 @@
+textarea.form-control {
+    transition: all 0.3s ease;
+    border: 1px solid #ccc;
+    box-shadow: none;
+  
+    &:hover {
+      border-color: #3498db;
+      box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    }
+  
+    &:focus {
+      border-color: #3498db;
+      box-shadow: 0 0 10px rgba(52, 152, 219, 0.4);
+      outline: none;
+    }
+  }
+  .form-label {
+    transition: color 0.3s ease;
+  }
+  
+  input.form-control:hover + .form-label,
+  textarea.form-control:hover + .form-label {
+    color: #3498db;
+  }
+  

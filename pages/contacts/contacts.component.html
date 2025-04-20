@@ -1,1 +1,53 @@
-<p>contacts works!</p>
+<section class="contact-section container py-5">
+    <h2 class="text-center mb-4">Contact Me</h2>
+  
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="mx-auto" style="max-width: 600px;">
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input
+          placeholder="Name"
+          type="text"
+          id="name"
+          name="name"
+          class="form-control"
+          [(ngModel)]="formData.name"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="email" class="form-label">Your Email</label>
+        <input
+          placeholder="Email"
+          type="email"
+          id="email"
+          name="email"
+          class="form-control"
+          [(ngModel)]="formData.email"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="message" class="form-label">Your Message</label>
+        <textarea
+          placeholder="Message"
+          id="message"
+          name="message"
+          rows="5"
+          class="form-control"
+          [(ngModel)]="formData.message"
+          required
+        ></textarea>
+      </div>
+  
+      <button
+        type="submit"
+        class="btn btn-primary w-100"
+        [disabled]="!contactForm.form.valid"
+      >
+        Send Message
+      </button>
+    </form>
+  </section>
+  
