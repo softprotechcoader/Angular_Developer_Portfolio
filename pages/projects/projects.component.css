@@ -1,18 +1,65 @@
 .timeline-item {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  height: 200px; /* Initial height of the box */
 }
 
-[data-aos="fade-right"] {
-  opacity: 0;
-  transform: translateX(30px);
+.timeline-item:hover {
+  transform: translateY(-10px); /* Slightly lift on hover */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Shadow for hover effect */
 }
 
-[data-aos="fade-left"] {
-  opacity: 0;
-  transform: translateX(-30px);
+.project-icon {
+  margin-top: 20px;
 }
 
-[data-aos].aos-animate {
-  opacity: 1;
-  transform: translateX(0);
+.project-icon i {
+  font-size: 60px; /* Large icons */
+  color: #007bff; /* Icon color */
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+  h4{
+    color: darkcyan;
+  }
+}
+
+.content h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #6c757d;
+}
+
+.content a {
+  font-size: 1rem;
+}
+
+.content:hover {
+  background-color: #f8f9fa; /* Light background on hover */
+}
+
+.timeline-item:hover .content {
+  height: 100%; /* Expand content on hover */
+  padding: 30px;
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 767px) {
+  .timeline-item {
+    height: auto; /* Adjust height for smaller screens */
+  }
+
+  .project-icon i {
+    font-size: 50px;
+  }
 }
