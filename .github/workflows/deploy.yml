@@ -36,7 +36,7 @@ jobs:
       - name: 🚀 Deploy to GitHub Pages
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npx angular-cli-ghpages --dir=dist/angular-developer-portfolio --no-silent --repo=https://$GH_TOKEN@github.com/softprotechcoader/Angular_Developer_Portfolio.git
+        run: npx angular-cli-ghpages --dir=dist/angular-developer-portfolio/browser --no-silent --repo=https://$GH_TOKEN@github.com/softprotechcoader/Angular_Developer_Portfolio.git
       
 
 
