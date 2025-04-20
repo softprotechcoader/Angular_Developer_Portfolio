@@ -10,6 +10,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contacts.component.css'
 })
 export class ContactsComponent {
+  emails: string[] = [
+    'softprotechcoder@outlook.com',
+    'softprotechcoader@gmail.com'
+  ];
+  
   formData = {
     name: '',
     email: '',

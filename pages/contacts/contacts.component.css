@@ -23,3 +23,15 @@ textarea.form-control {
     color: #3498db;
   }
   
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s;
+  
+    &:hover {
+      color: #ffe8e8;
+      text-decoration: underline;
+    }
+  }
+  
