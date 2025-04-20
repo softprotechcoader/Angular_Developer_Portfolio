@@ -3,109 +3,132 @@
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  height: 200px; /* Initial height of the box */
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: auto;
+  min-height: 220px;
+  padding: 20px;
+  z-index: 1;
 }
 
 .timeline-item:hover {
-  transform: translateY(-10px); /* Slightly lift on hover */
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Shadow for hover effect */
+  transform: scale(1.5); /* Expand to 1.5x size */
+  box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 
 .project-icon {
-  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .project-icon i {
-  font-size: 60px; /* Large icons */
-  color: #007bff; /* Icon color */
+  font-size: 60px;
+  color: #007bff;
 }
 
 .content {
-  padding: 20px;
   text-align: center;
-  h4{
-    color: darkcyan;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 10px;
 }
 
 .content h4 {
   font-size: 1.25rem;
   font-weight: bold;
+  color: #333;
 }
 
-.content p {
+.content .short-desc {
   font-size: 1rem;
-  margin-bottom: 20px;
   color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.content .full-desc {
+  font-size: 1rem;
+  color: #333;
+  display: none;
+  margin-bottom: 15px;
+}
+
+.timeline-item:hover .content .full-desc {
+  display: block;
+}
+
+.timeline-item:hover .content .short-desc {
+  display: none;
 }
 
 .content a {
-  font-size: 1rem;
+  font-size: 0.95rem;
+  color: white;
+  background-color: #007bff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.content:hover {
-  background-color: #f8f9fa; /* Light background on hover */
-}
-
-.timeline-item:hover .content {
-  height: 100%; /* Expand content on hover */
-  padding: 30px;
-  background-color: #f1f1f1;
+.content a:hover {
+  background-color: #0056b3;
 }
 
 @media (max-width: 767px) {
   .timeline-item {
-    height: auto; /* Adjust height for smaller screens */
-  }
-
-  .project-icon i {
-    font-size: 50px;
+    transform: none !important;
   }
 }
 
 @media (max-width: 768px) {
-  .timeline-item {
-    height: auto;
-    padding: 10px;
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
   }
 
-  .project-icon i {
-    font-size: 50px;
+  .project-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
-  .content h4 {
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-desc {
     font-size: 1rem;
   }
 
-  .content p {
+  .github-link {
     font-size: 0.9rem;
-  }
-
-  .content a {
-    font-size: 0.9rem;
+    margin-top: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .timeline-item {
-    height: auto;
-    padding: 5px;
+  .project-card {
+    padding: 0.5rem;
   }
 
-  .project-icon i {
-    font-size: 40px;
+  .project-icon {
+    font-size: 1.5rem;
   }
 
-  .content h4 {
-    font-size: 0.9rem;
+  .project-title {
+    font-size: 1rem;
   }
 
-  .content p {
+  .project-desc {
     font-size: 0.8rem;
   }
 
-  .content a {
+  .github-link {
     font-size: 0.8rem;
   }
 }
