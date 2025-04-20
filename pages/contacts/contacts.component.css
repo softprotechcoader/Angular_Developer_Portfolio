@@ -34,4 +34,33 @@ textarea.form-control {
       text-decoration: underline;
     }
   }
-  
+
+@media (max-width: 768px) {
+  textarea.form-control {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .form-label {
+    font-size: 14px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  textarea.form-control {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .form-label {
+    font-size: 12px;
+  }
+
+  a {
+    font-size: 12px;
+  }
+}
