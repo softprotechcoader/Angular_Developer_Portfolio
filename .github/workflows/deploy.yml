@@ -25,7 +25,7 @@ jobs:
         run: npm run build -- --configuration production --base-href /Angular_Developer_Portfolio/
 
       - name: ✅ Check build output
-        run: ls -la dist && ls -la dist/Angular_Developer_Portfolio
+        run: ls -la dist && ls -la dist/angular-developer-portfolio
 
       - name: 🚀 Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/Angular_Developer_Portfolio
+        run: npx angular-cli-ghpages --dir=dist/angular-developer-portfolio
