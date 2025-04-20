@@ -33,7 +33,10 @@ jobs:
           git config --global user.name "Ayush Vaibhav"
 
       - name: 🚀 Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/angular-developer-portfolio --no-silent
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npx angular-cli-ghpages --dir=dist/angular-developer-portfolio --no-silent --repo=https://$GH_TOKEN@github.com/softprotechcoader/Angular_Developer_Portfolio.git
+      
 
 
      
