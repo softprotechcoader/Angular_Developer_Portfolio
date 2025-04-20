@@ -28,4 +28,4 @@ jobs:
         run: ls -la dist && ls -la dist/angular-developer-portfolio
 
       - name: 🚀 Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/angular-developer-portfolio
+        run: npx angular-cli-ghpages --dir=dist/angular-developer-portfolio --no-silent
