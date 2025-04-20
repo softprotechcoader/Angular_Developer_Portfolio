@@ -23,6 +23,7 @@ jobs:
 
       - name: 🛠 Build Angular project
         run: npm run build -- --configuration production --base-href /Angular_Developer_Portfolio/
+    
 
       - name: ✅ Check build output
         run: ls -la dist && ls -la dist/angular-developer-portfolio
