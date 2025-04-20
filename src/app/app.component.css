@@ -47,10 +47,14 @@
     }
   }
  
+.app-main{
+  padding: 1rem 5rem;
+}
+
   .app-footer {
     background-color: #1e1e1e;
     color: #ffffff;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 5rem;
     border-top: 1px solid #333;
   
     .footer-content {
@@ -68,7 +72,7 @@
     .footer-right {
       a {
         color: #ffffff;
-        margin-left: 1rem;
+        margin-left: 4rem;
         font-size: 1.4rem;
         transition: color 0.3s ease;
   
