@@ -27,5 +27,13 @@ jobs:
       - name: ✅ Check build output
         run: ls -la dist && ls -la dist/angular-developer-portfolio
 
+      - name: 🧾 Set Git identity
+        run: |
+          git config --global user.email "softprotechcoder@gmail.com"
+          git config --global user.name "Ayush Vaibhav"
+
       - name: 🚀 Deploy to GitHub Pages
         run: npx angular-cli-ghpages --dir=dist/angular-developer-portfolio --no-silent
+
+
+     
